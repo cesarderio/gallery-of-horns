@@ -5,9 +5,6 @@ import Main from './Main.js';
 import Footer from './Footer.js';
 import './App.css'
 
-
-
-
 //class component
 class App extends React.Component{
   render(){
@@ -20,9 +17,6 @@ class App extends React.Component{
     )
   }
 }
-
-
-
 
 //export
 export default App;
