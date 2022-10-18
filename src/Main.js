@@ -1,48 +1,29 @@
 import React from "react";
 import HornedBeast from "./HornedBeast.js";
-
-/*import data from './data.json';*/
-
+import data from './data.json';
+import './Main.css';
 
 class Main extends React.Component{
   render(){
+    let beasts = [];
 
-    /* 
-    let people =[];
-
-    data.forEach((student)=>{
-      people.push(
-        <Person
-        name={student.name}
-        imageUrl={student.imageUrl}
-        key={index}
+    data.forEach((beast)=>{
+      beasts.push(
+        <HornedBeast
+        title={beast.title}
+        imageUrl={beast.image_url}
+        description={beast.description}
+        key={beast.id}
         />
       )
     });
-
-
-
-    return (
-      <>
-      <main >
-      {People}
-      </main>
-      </>
-    )
-    */
-
-
-
-
-
     return(
       <>
       <main >
-        <HornedBeast/>
+        {beasts}
       </main>
       </>
     )
   }
 }
-
 export default Main;
