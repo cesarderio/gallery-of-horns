@@ -27,13 +27,13 @@ class HornedBeast extends React.Component {
       </article>
         */
       <article>
-        <Card key={this.props.id} style={{ width: "18rem", height: "32rem" }} bg={'success'} text={'light'} >
+        <Card key={this.props.id} style={{ width: "18rem", height: "35rem" }} bg={'success'} text={'light'} >
           <Card.Img
             variant="top"
             src={this.props.imageUrl}
             alt={this.props.description}
             title={this.props.title}
-            
+            style={{width: "auto", height: "20rem"}}
           />
           <Card.Body>
             <Card.Title>{this.props.title}<hr></hr>{this.state.likes}💙</Card.Title>

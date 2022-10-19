@@ -1,12 +1,8 @@
 article {
-  
-  padding: 1vw;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
 }
-article p:last-of-type {
-  padding-left: 1rem;
-  cursor: pointer;
-}
-article p:last-of-type:hover {
-  color: rgb(6, 238, 255);
-}
+
 
