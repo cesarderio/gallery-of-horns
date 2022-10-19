@@ -1,7 +1,10 @@
 body {
-  background-color: rgb(17, 107, 241);
+  background-color: rgb(3, 154, 255);
   display: inline-block;
   justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 }
 
 .App {
