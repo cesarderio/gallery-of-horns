@@ -1,0 +1,12 @@
+article {
+  height: 10%;
+  padding: 1vw;
+}
+article p:last-of-type {
+  padding-left: 1rem;
+  cursor: pointer;
+}
+article p:last-of-type:hover {
+  color: rgb(6, 238, 255);
+}
+
