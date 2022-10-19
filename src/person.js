@@ -107,3 +107,13 @@ class HornedBeast extends React.Component {
 }
 
  export default HornedBeast;
+
+
+
+
+
+ main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
