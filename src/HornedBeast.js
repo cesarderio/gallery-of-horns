@@ -1,60 +1,49 @@
 import React from "react";
 
-/*
-class HornedBeast extends React.Component{
-  render(){
-    return(
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+
+class HornedBeast extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      likes: 0,
+    };
+  }
+  handleLikes = () => {
+    this.setState({
+      likes: this.state.likes + 1,
+    });
+  };
+  render() {
+    console.log("app state", this.state);
+    return (
+      /*
       <article>
+        <h3>{this.props.id}</h3>
         <h2>{this.props.title}</h2>
-        <img src="" alt="" title=""/>
-        <p>{this.props.description}</p>
+          <img src={this.props.image_url} alt={this.props.description} title={this.props.title} />
+          <h2>{this.props.description}</h2>
       </article>
-    )
+        */
+      <article>
+        <Card key={this.props.id} style={{ width: "18rem" }}>
+          <Card.Img
+            variant="top"
+            src={this.props.imageUrl}
+            alt={this.props.description}
+            title={this.props.title}
+          />
+          <Card.Body>
+            <Card.Title>{this.props.title}-{this.state.likes}</Card.Title>
+            <Card.Text>{this.props.description}</Card.Text>
+            <Button onClick={this.handleLikes} variant="primary">
+              Like
+            </Button>
+          </Card.Body>
+        </Card>
+      </article>
+    );
   }
 }
-
 export default HornedBeast;
-*/
-
-export default function HornedBeast(){
-  const beasts = [{
-    "id": 1,
-    "image_url": "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
-    "title": "UniWhal",
-    "description": "A unicorn and a narwhal nuzzling their horns",
-    "keyword": "narwhal",
-    "horns": 1
-  },
-
-  {
-    "id": 2,
-    "image_url": "https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80",
-    "title": "Rhino Family",
-    "description": "Parent rhino with two babies",
-    "keyword": "rhino",
-    "horns": 2
-  },
-
-  {
-    "id": 3,
-    "image_url": "https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg",
-    "title": "Unicorn Head",
-    "description": "Someone wearing a very silly unicorn head mask",
-    "keyword": "unicorn",
-    "horns": 1
-}];
-
-return (
-  <div>
-    {beasts.map(beast =>{
-      return (
-        <div key={beast.id}>
-          <h2>{beast.title}</h2>
-          <img src={beast.image_url} alt={beast.description} title={beast.title} />
-          <h2>{beast.description}</h2>
-        </div>
-      );
-    })}
-    </div>
-);
-}

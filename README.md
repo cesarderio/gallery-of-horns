@@ -1,3 +1,9 @@
+Number and name of feature: Lab: Class 02 / React states and props
+Estimate of time needed to complete: 4 hours
+Start time:
+Finish time:
+Actual time needed to complete:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
