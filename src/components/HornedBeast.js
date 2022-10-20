@@ -21,7 +21,6 @@ class HornedBeast extends React.Component {
   };
 
   render() {
-    console.log("app state", this.state);
     return (
       <Col className="m-4">
         <Card key={this.props.id} bg={"success"} text={"light"}>
