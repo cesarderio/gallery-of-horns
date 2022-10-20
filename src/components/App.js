@@ -7,8 +7,8 @@ import '../CSS/App.css'
 import Modal from 'react-bootstrap/Modal';
 import data from '../data.json';
 import Button from "react-bootstrap/Button";
-
 import { Container } from "react-bootstrap";
+import SelectedBeast from "./SelectedBeast.js";
 
 //class component
 class App extends React.Component{
@@ -51,30 +51,13 @@ handleOpenModal = (beast) => {
         handleOpenModal={this.handleOpenModal}
         data={data}
       />
-        <Modal 
-          show={this.state.showModal}
-          onHide={this.handleCloseModal}
-          backdrop="static"
-          keyboard="false"
-          
-        >
-          <Modal.Header >
-          <Modal.Title className="modal-title w-100">{this.state.selectedBeast.title}</Modal.Title>
-          </Modal.Header>
-
-          <Modal.Body >
-            <Container>
-              <img src={this.state.selectedBeast.image_url} alt={this.state.selectedBeast.description} style={{ width: "100%"}}/>
-              {this.state.selectedBeast.description}
-            </Container>
-          </Modal.Body>
-
-          <Modal.Footer className="modal-footer content-center mx-auto d-block text-center">
-          <Button variant="secondary" onClick={this.handleCloseModal}>Close</Button>
-         
-          </Modal.Footer>
-        </Modal>
-
+      <SelectedBeast 
+       show={this.state.showModal}
+       onHide={this.handleCloseModal}
+       title = {this.state.selectedBeast.title}
+       src={this.state.selectedBeast.image_url}
+       alt={this.state.selectedBeast.description}
+      />
       <Footer />
       </>
     )

@@ -1,4 +1,7 @@
-Lab Class 02
+# FEATURES
+
+## Lab Class 02
+
 Feature #1: Display images
 Estimate of time needed to complete: 1 hour
 Start time: 2:00 PM
@@ -17,10 +20,18 @@ Start time: 5:00 PM
 Finish time: 6:00 PM
 Actual time needed to complete: 1 hour
 
-Lab Class 03
+## Lab Class 03
 
 Feature #1: Display a Modal
 Estimate of time needed to complete: 1 hour
 Start time: 12:00 PM
 Finish time: 4:00 PM
 Actual time needed to complete: 3 hours
+
+## Lab Class 04
+
+Feature #1: Filter by Numbers of Horns
+Estimate of time needed to complete: 1 hour
+Start time: 2:00 PM
+Finish time: 0:00 PM
+Actual time needed to complete: 0 hours
