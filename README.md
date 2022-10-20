@@ -1,3 +1,4 @@
+Lab Class 02
 Feature #1: Display images
 Estimate of time needed to complete: 1 hour
 Start time: 2:00 PM
@@ -15,3 +16,11 @@ Estimate of time needed to complete: 1 hour
 Start time: 5:00 PM
 Finish time: 6:00 PM
 Actual time needed to complete: 1 hour
+
+Lab Class 03
+
+Feature #1: Display a Modal
+Estimate of time needed to complete: 1 hour
+Start time: 0:00 PM
+Finish time: 0:00 PM
+Actual time needed to complete: 0.0 hours
