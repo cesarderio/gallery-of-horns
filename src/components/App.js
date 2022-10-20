@@ -4,10 +4,9 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 import '../CSS/App.css'
-import Modal from 'react-bootstrap/Modal';
+
 import data from '../data.json';
-import Button from "react-bootstrap/Button";
-import { Container } from "react-bootstrap";
+
 import SelectedBeast from "./SelectedBeast.js";
 
 import SearchForm from "./SearchForm.js";
@@ -38,12 +37,11 @@ handleSubmit = (event) => {
 handleSelect = (event) => {
   let selected = event.target.value;
 
-  if (selected === 'Select') {
-    let newData = data.filter(this.includes())
-    this.setState({sortedData: newData});
-  } else{
+  if (selected) {
     let newData = data.filter(beast => beast.horns === parseInt(selected));
     this.setState({sortedData: newData});
+  } else{
+    this.setState({sortedData: data});
   }
 }
 
@@ -67,18 +65,19 @@ handleOpenModal = (beast) => {
 }
 
   render(){
+    console.log("app state", this.state);
     return (
       <>
       <Header 
         heart={this.state.heart}
       />
       <SearchForm
-        handleSubmit={this.state.handleSubmit} handleSelect={this.state.handleSelect}
+       handleSelect={this.handleSelect}
         />
       <Main 
         addHearts={this.addHearts}
         handleOpenModal={this.handleOpenModal}
-        data={data}
+        data={this.state.sortedData}
       />
       <SelectedBeast 
        show={this.state.showModal}

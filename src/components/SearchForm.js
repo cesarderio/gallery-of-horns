@@ -1,7 +1,8 @@
 import React from "react";
 import { InputGroup } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+
 import Form from "react-bootstrap/Form";
+import '../CSS/Main.css';
 
 class SearchForm extends React.Component {
   render() {
@@ -9,20 +10,16 @@ class SearchForm extends React.Component {
       <>
         <InputGroup>
           <Form.Group 
-           onSubmit={this.props.handleSubmit}
            className="horn-select" 
            controlId="searchForm"
           >
             <InputGroup.Text>Number of Horns</InputGroup.Text>
             <Form.Select onChange={this.props.handleSelect}>
-              <option>Select</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3+</option>
+              <option value=''>Select</option>
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3+</option>
             </Form.Select>
-            <Button  type="submit" variant="primary">
-              Search
-            </Button>
           </Form.Group>
         </InputGroup>
       </>
