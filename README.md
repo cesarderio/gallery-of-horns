@@ -21,6 +21,6 @@ Lab Class 03
 
 Feature #1: Display a Modal
 Estimate of time needed to complete: 1 hour
-Start time: 0:00 PM
-Finish time: 0:00 PM
-Actual time needed to complete: 0.0 hours
+Start time: 12:00 PM
+Finish time: 4:00 PM
+Actual time needed to complete: 3 hours
