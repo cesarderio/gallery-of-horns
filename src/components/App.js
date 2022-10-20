@@ -10,6 +10,8 @@ import Button from "react-bootstrap/Button";
 import { Container } from "react-bootstrap";
 import SelectedBeast from "./SelectedBeast.js";
 
+import SearchForm from "./SearchForm.js";
+
 //class component
 class App extends React.Component{
   constructor(props){
@@ -17,9 +19,33 @@ class App extends React.Component{
     this.state = {
       heart: '',
       showModal: false,
-      selectedBeast: ''
+      selectedBeast: '',
+      selectedVal: '',
+      sortedData: data
     }
   }
+
+handleSubmit = (event) => {
+  event.preventDefault();
+
+  let selected = event.target.selected.value;
+
+  this.setState({
+    selectedVal: selected
+  });
+}
+
+handleSelect = (event) => {
+  let selected = event.target.value;
+
+  if (selected === 'Select') {
+    let newData = data.filter(this.includes())
+    this.setState({sortedData: newData});
+  } else{
+    let newData = data.filter(beast => beast.horns === parseInt(selected));
+    this.setState({sortedData: newData});
+  }
+}
 
 addHearts = () => {
   this.setState({
@@ -46,6 +72,9 @@ handleOpenModal = (beast) => {
       <Header 
         heart={this.state.heart}
       />
+      <SearchForm
+        handleSubmit={this.state.handleSubmit} handleSelect={this.state.handleSelect}
+        />
       <Main 
         addHearts={this.addHearts}
         handleOpenModal={this.handleOpenModal}
